@@ -1,10 +1,15 @@
 <template>
     <div class="container mx-auto max-w-3xl">
         <header class="flex justify-between items-center mt-5">
-            <div>
-                <NuxtLink to="/" class="text-xl font-semibold p-2 hover:bg-slate-200">Blog Page</NuxtLink>
+
+            <div class="flex items-center space-x-12">
+                <div>
+                    <NuxtLink to="/" class="text-xl font-semibold p-2 hover:bg-slate-200">Blog Page</NuxtLink>
+                </div>
+
+                <Menu />
             </div>
-            <Menu />
+           <ColorModeSelector />
         </header>
 
 
@@ -15,6 +20,7 @@
 </template>
 
 <script setup>
+
 
 useHead({
     titleTemplate: '%s | Blog Page', 
@@ -35,5 +41,8 @@ useHead({
 <style>
     body {
         font-family: 'Roboto', sans-serif;
+    }
+    body{
+        @apply bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-700
     }
 </style>
